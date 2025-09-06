@@ -1,6 +1,7 @@
 package package01;
 
-public class Shipper {
+public class Shipper implements IGuardar {
+
     private int shipperID;
     private String companyName;
     private String phone;
@@ -35,5 +36,15 @@ public class Shipper {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toFileString() {
+        return shipperID + ";" + companyName + ";" + phone;
+    }
+
+    @Override
+    public String getFileName() {
+        return "shippers.txt";
     }
 }

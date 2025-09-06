@@ -1,11 +1,13 @@
 package package01;
 
-public class Customers {
+public class Customers implements IGuardar {
+
     private int customerID;
     private String companyName;
     private String contactName;
     private String contactTitle;
     private String address;
+
     private String city;
     private String region;
     private String postalCode;
@@ -115,5 +117,15 @@ public class Customers {
 
     public void setFax(String fax) {
         this.fax = fax;
+    }
+
+    @Override
+    public String toFileString() {
+        return customerID + ";" + companyName + ";" + contactName + ";" + contactTitle + ";" + address + ";" + city + ";" + region + ";" + postalCode + ";" + country + ";" + phone + ";" + fax;
+    }
+
+    @Override
+    public String getFileName() {
+        return "customers.txt";
     }
 }

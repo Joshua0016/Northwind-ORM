@@ -1,6 +1,6 @@
 package package01;
 
-public class Categories {
+public class Categories implements IGuardar {
 
     private int categoryID;
     private String categoryName;
@@ -44,6 +44,16 @@ public class Categories {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    @Override
+    public String toFileString() {
+        return categoryID + ";" + categoryName + ";" + description + ";" + picture;
+    }
+
+    @Override
+    public String getFileName() {
+        return "categories.txt";
     }
 
 }

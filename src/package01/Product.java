@@ -1,6 +1,6 @@
 package package01;
 
-public class Product {
+public class Product implements IGuardar {
 
     private int productID;
     private String productName;
@@ -106,6 +106,16 @@ public class Product {
 
     public void setDiscontinued(boolean discontinued) {
         this.discontinued = discontinued;
+    }
+
+    @Override
+    public String toFileString() {
+        return "Id;" + productID + ";Name;" + productName + ";SupplierID;" + supplierID + ";CategoryID;" + categoryID + ";QuantityPerUnit;" + quantityPerUnit + ";UnitPrice;" + unitPrice + ";UnitsInStock;" + unitsInStock + ";UnitsOnOrder;" + unitsOnOrder + ";ReorderLevel;" + reorderLevel + ";Discontinued;" + discontinued;
+    }
+
+    @Override
+    public String getFileName() {
+        return "products.txt";
     }
 
 }

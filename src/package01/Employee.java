@@ -1,6 +1,6 @@
 package package01;
 
-public class Employee {
+public class Employee implements IGuardar {
 
     private int employeeID;
     private String lastName;
@@ -187,6 +187,16 @@ public class Employee {
 
     public void setPhotoPath(String photoPath) {
         this.photoPath = photoPath;
+    }
+
+    @Override
+    public String toFileString() {
+        return employeeID + ";" + lastName + ";" + firstName + ";" + title + ";" + titleOfCourtesy + ";" + birthDate + ";" + hireDate + ";" + address + ";" + city + ";" + region + ";" + postalCode + ";" + country + ";" + homePhone + ";" + extension + ";" + photo + ";" + notes + ";" + reportsTo + ";" + photoPath;
+    }
+
+    @Override
+    public String getFileName() {
+        return "employees.txt";
     }
 
 }

@@ -1,6 +1,6 @@
 package package01;
 
-public class OrderDetails {
+public class OrderDetails implements IGuardar {
 
     private Order orderID;
     private Product productID;
@@ -55,5 +55,15 @@ public class OrderDetails {
 
     public void setDiscount(double discount) {
         this.discount = discount;
+    }
+
+    @Override
+    public String toFileString() {
+        return orderID.getOrderID() + ";" + productID.getProductID() + ";" + unitPrice + ";" + quantity + ";" + discount;
+    }
+
+    @Override
+    public String getFileName() {
+        return "order_details.txt";
     }
 }

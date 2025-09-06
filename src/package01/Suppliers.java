@@ -1,6 +1,6 @@
 package package01;
 
-public class Suppliers {
+public class Suppliers implements IGuardar {
 
     private int supplierID;
     private String companyName;
@@ -126,6 +126,17 @@ public class Suppliers {
 
     public void setHomePage(String homePage) {
         this.homePage = homePage;
+    }
+
+    @Override
+    public String toFileString() {
+        return supplierID + ";" + companyName + ";" + contactName + ";" + contactTitle + ";" + address + ";" + city
+                + ";" + region + ";" + postalCode + ";" + country + ";" + phone + ";" + fax + ";" + homePage;
+    }
+
+    @Override
+    public String getFileName() {
+        return "suppliers.txt";
     }
 
 }

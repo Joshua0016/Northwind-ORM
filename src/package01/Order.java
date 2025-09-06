@@ -2,7 +2,8 @@ package package01;
 
 import java.time.LocalDate;
 
-public class Order {
+public class Order implements IGuardar {
+
     private int orderID;
     private Customers customersID;
     private Employee employeeID;
@@ -148,5 +149,15 @@ public class Order {
 
     public void setShipCountry(String shipCountry) {
         this.shipCountry = shipCountry;
+    }
+
+    @Override
+    public String toFileString() {
+        return orderID + ";" + customersID.getCustomerID() + ";" + employeeID.getEmployeeID() + ";" + orderDate + ";" + requiredDate + ";" + shippedDate + ";" + shipVia.getShipperID() + ";" + freight + ";" + shipName + ";" + shipAddress + ";" + shipCity + ";" + shipRegion + ";" + shipPostalCode + ";" + shipCountry;
+    }
+
+    @Override
+    public String getFileName() {
+        return "orders.txt";
     }
 }
