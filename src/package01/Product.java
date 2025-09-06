@@ -1,11 +1,13 @@
 package package01;
 
+import java.util.function.Supplier;
+
 public class Product implements IGuardar {
 
     private int productID;
     private String productName;
-    private long supplierID;
-    private long categoryID;
+    private Supplier supplierID;
+    private Categories categoryID;
     private String quantityPerUnit;
     private double unitPrice;
     private int unitsInStock;
@@ -13,7 +15,7 @@ public class Product implements IGuardar {
     private int reorderLevel;
     private boolean discontinued;
 
-    public Product(int productID, String productName, long supplierID, long categoryID,
+    public Product(int productID, String productName, Supplier supplierID, Categories categoryID,
             String quantityPerUnit, double unitPrice, int unitsInStock, int unitsOnOrder, int reorderLevel,
             boolean discontinued) {
         this.productID = productID;
@@ -26,7 +28,14 @@ public class Product implements IGuardar {
         this.unitsOnOrder = unitsOnOrder;
         this.reorderLevel = reorderLevel;
         this.discontinued = discontinued;
-    }
+    
+    
+
+    
+
+    
+
+    
 
     public int getProductID() {
         return productID;
@@ -44,19 +53,19 @@ public class Product implements IGuardar {
         this.productName = productName;
     }
 
-    public long getSupplierID() {
+    public Supplier getSupplierID() {
         return supplierID;
     }
 
-    public void setSupplierID(long supplierID) {
+    public void setSupplierID(Supplier supplierID) {
         this.supplierID = supplierID;
     }
 
-    public long getCategoryID() {
+    public Categories getCategoryID() {
         return categoryID;
     }
 
-    public void setCategoryID(long categoryID) {
+    public void setCategoryID(Categories categoryID) {
         this.categoryID = categoryID;
     }
 
@@ -118,4 +127,5 @@ public class Product implements IGuardar {
         return "products.txt";
     }
 
+}
 }
