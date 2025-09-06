@@ -1,6 +1,6 @@
-package package01;
+package models;
 
-public class Categories implements IGuardar {
+public class Categories  {
 
     private int categoryID;
     private String categoryName;

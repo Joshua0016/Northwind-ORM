@@ -1,13 +1,13 @@
-package package01;
+package models;
 
 import java.util.function.Supplier;
 
-public class Product implements IGuardar {
+public class Product  {
 
     private int productID;
     private String productName;
     private Supplier supplierID;
-    private Categories categoryID;
+    private Categorie categoryID;
     private String quantityPerUnit;
     private double unitPrice;
     private int unitsInStock;

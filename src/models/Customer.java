@@ -1,24 +1,24 @@
-package package01;
+package models;
 
-public class Suppliers implements IGuardar {
+public class Customers  {
 
-    private int supplierID;
+    private int customerID;
     private String companyName;
     private String contactName;
     private String contactTitle;
     private String address;
+
     private String city;
     private String region;
     private String postalCode;
     private String country;
     private String phone;
     private String fax;
-    private String homePage;
 
-    public Suppliers(int supplierID, String companyName, String contactName, String contactTitle, String address,
-            String city, String region, String postalCode, String country, String phone, String fax,
-            String homePage) {
-        this.supplierID = supplierID;
+    public Customers(int customerID, String companyName, String contactName, String contactTitle,
+            String address, String city, String region, String postalCode,
+            String country, String phone, String fax) {
+        this.customerID = customerID;
         this.companyName = companyName;
         this.contactName = contactName;
         this.contactTitle = contactTitle;
@@ -29,15 +29,14 @@ public class Suppliers implements IGuardar {
         this.country = country;
         this.phone = phone;
         this.fax = fax;
-        this.homePage = homePage;
     }
 
-    public int getSupplierID() {
-        return supplierID;
+    public int getCustomerID() {
+        return customerID;
     }
 
-    public void setSupplierID(int supplierID) {
-        this.supplierID = supplierID;
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
     }
 
     public String getCompanyName() {
@@ -120,23 +119,13 @@ public class Suppliers implements IGuardar {
         this.fax = fax;
     }
 
-    public String getHomePage() {
-        return homePage;
-    }
-
-    public void setHomePage(String homePage) {
-        this.homePage = homePage;
-    }
-
     @Override
     public String toFileString() {
-        return supplierID + ";" + companyName + ";" + contactName + ";" + contactTitle + ";" + address + ";" + city
-                + ";" + region + ";" + postalCode + ";" + country + ";" + phone + ";" + fax + ";" + homePage;
+        return customerID + ";" + companyName + ";" + contactName + ";" + contactTitle + ";" + address + ";" + city + ";" + region + ";" + postalCode + ";" + country + ";" + phone + ";" + fax;
     }
 
     @Override
     public String getFileName() {
-        return "suppliers.txt";
+        return "customers.txt";
     }
-
 }

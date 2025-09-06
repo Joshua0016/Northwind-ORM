@@ -1,6 +1,6 @@
-package package01;
+package models;
 
-public class OrderDetails implements IGuardar {
+public class OrderDetails  {
 
     private Order orderID;
     private Product productID;

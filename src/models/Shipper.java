@@ -1,6 +1,6 @@
-package package01;
+package models;
 
-public class Shipper implements IGuardar {
+public class Shipper  {
 
     private int shipperID;
     private String companyName;

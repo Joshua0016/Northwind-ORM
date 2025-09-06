@@ -1,11 +1,11 @@
-package package01;
+package models;
 
 import java.time.LocalDate;
 
-public class Order implements IGuardar {
+public class Order  {
 
     private int orderID;
-    private Customers customersID;
+    private Customer customersID;
     private Employee employeeID;
     private LocalDate orderDate;
     private LocalDate requiredDate;

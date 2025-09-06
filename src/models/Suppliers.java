@@ -1,24 +1,24 @@
-package package01;
+package models;
 
-public class Customers implements IGuardar {
+public class Suppliers  {
 
-    private int customerID;
+    private int supplierID;
     private String companyName;
     private String contactName;
     private String contactTitle;
     private String address;
-
     private String city;
     private String region;
     private String postalCode;
     private String country;
     private String phone;
     private String fax;
+    private String homePage;
 
-    public Customers(int customerID, String companyName, String contactName, String contactTitle,
-            String address, String city, String region, String postalCode,
-            String country, String phone, String fax) {
-        this.customerID = customerID;
+    public Suppliers(int supplierID, String companyName, String contactName, String contactTitle, String address,
+            String city, String region, String postalCode, String country, String phone, String fax,
+            String homePage) {
+        this.supplierID = supplierID;
         this.companyName = companyName;
         this.contactName = contactName;
         this.contactTitle = contactTitle;
@@ -29,14 +29,15 @@ public class Customers implements IGuardar {
         this.country = country;
         this.phone = phone;
         this.fax = fax;
+        this.homePage = homePage;
     }
 
-    public int getCustomerID() {
-        return customerID;
+    public int getSupplierID() {
+        return supplierID;
     }
 
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
+    public void setSupplierID(int supplierID) {
+        this.supplierID = supplierID;
     }
 
     public String getCompanyName() {
@@ -119,13 +120,14 @@ public class Customers implements IGuardar {
         this.fax = fax;
     }
 
-    @Override
-    public String toFileString() {
-        return customerID + ";" + companyName + ";" + contactName + ";" + contactTitle + ";" + address + ";" + city + ";" + region + ";" + postalCode + ";" + country + ";" + phone + ";" + fax;
+    public String getHomePage() {
+        return homePage;
     }
 
-    @Override
-    public String getFileName() {
-        return "customers.txt";
+    public void setHomePage(String homePage) {
+        this.homePage = homePage;
     }
+
+    
+
 }
