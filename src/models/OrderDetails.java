@@ -57,13 +57,5 @@ public class OrderDetails  {
         this.discount = discount;
     }
 
-    @Override
-    public String toFileString() {
-        return orderID.getOrderID() + ";" + productID.getProductID() + ";" + unitPrice + ";" + quantity + ";" + discount;
-    }
-
-    @Override
-    public String getFileName() {
-        return "order_details.txt";
-    }
+   
 }

@@ -119,13 +119,5 @@ public class Customers  {
         this.fax = fax;
     }
 
-    @Override
-    public String toFileString() {
-        return customerID + ";" + companyName + ";" + contactName + ";" + contactTitle + ";" + address + ";" + city + ";" + region + ";" + postalCode + ";" + country + ";" + phone + ";" + fax;
-    }
-
-    @Override
-    public String getFileName() {
-        return "customers.txt";
-    }
+    
 }

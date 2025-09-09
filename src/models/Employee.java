@@ -191,14 +191,6 @@ public class Employee  {
         this.photoPath = photoPath;
     }
 
-    @Override
-    public String toFileString() {
-        return employeeID + ";" + lastName + ";" + firstName + ";" + title + ";" + titleOfCourtesy + ";" + birthDate + ";" + hireDate + ";" + address + ";" + city + ";" + region + ";" + postalCode + ";" + country + ";" + homePhone + ";" + extension + ";" + photo + ";" + notes + ";" + reportsTo + ";" + photoPath;
-    }
-
-    @Override
-    public String getFileName() {
-        return "employees.txt";
-    }
+   
 
 }

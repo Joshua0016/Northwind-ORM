@@ -38,13 +38,5 @@ public class Shipper  {
         this.phone = phone;
     }
 
-    @Override
-    public String toFileString() {
-        return shipperID + ";" + companyName + ";" + phone;
-    }
-
-    @Override
-    public String getFileName() {
-        return "shippers.txt";
-    }
+ 
 }

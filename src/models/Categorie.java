@@ -46,14 +46,6 @@ public class Categories  {
         this.picture = picture;
     }
 
-    @Override
-    public String toFileString() {
-        return categoryID + ";" + categoryName + ";" + description + ";" + picture;
-    }
-
-    @Override
-    public String getFileName() {
-        return "categories.txt";
-    }
+    
 
 }

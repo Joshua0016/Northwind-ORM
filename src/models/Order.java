@@ -151,13 +151,5 @@ public class Order  {
         this.shipCountry = shipCountry;
     }
 
-    @Override
-    public String toFileString() {
-        return orderID + ";" + customersID.getCustomerID() + ";" + employeeID.getEmployeeID() + ";" + orderDate + ";" + requiredDate + ";" + shippedDate + ";" + shipVia.getShipperID() + ";" + freight + ";" + shipName + ";" + shipAddress + ";" + shipCity + ";" + shipRegion + ";" + shipPostalCode + ";" + shipCountry;
-    }
-
-    @Override
-    public String getFileName() {
-        return "orders.txt";
-    }
+   
 }
