@@ -15,7 +15,7 @@ public class Product  {
     private int reorderLevel;
     private boolean discontinued;
 
-    public Product(int productID, String productName, Supplier supplierID, Categories categoryID,
+    public Product(int productID, String productName, Supplier supplierID, Categorie categoryID,
             String quantityPerUnit, double unitPrice, int unitsInStock, int unitsOnOrder, int reorderLevel,
             boolean discontinued) {
         this.productID = productID;
@@ -61,11 +61,11 @@ public class Product  {
         this.supplierID = supplierID;
     }
 
-    public Categories getCategoryID() {
+    public Categorie getCategoryID() {
         return categoryID;
     }
 
-    public void setCategoryID(Categories categoryID) {
+    public void setCategoryID(Categorie categoryID) {
         this.categoryID = categoryID;
     }
 

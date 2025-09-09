@@ -19,7 +19,7 @@ public class Order  {
     private String shipPostalCode;
     private String shipCountry;
 
-    public Order(int orderID, Customers customersID, Employee employeeID, LocalDate orderDate,
+    public Order(int orderID, Customer customersID, Employee employeeID, LocalDate orderDate,
             LocalDate requiredDate, LocalDate shippedDate, Shipper shipVia, double freight,
             String shipName, String shipAddress, String shipCity, String shipRegion, String shipPostalCode,
             String shipCountry) {
@@ -47,11 +47,11 @@ public class Order  {
         this.orderID = orderID;
     }
 
-    public Customers getCustomers() {
+    public Customer getCustomers() {
         return customersID;
     }
 
-    public void setCustomers(Customers customersID) {
+    public void setCustomers(Customer customersID) {
         this.customersID = customersID;
     }
 

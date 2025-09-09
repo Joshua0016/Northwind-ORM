@@ -24,7 +24,7 @@ public class Employee  {
     private String photoPath;
 
     public Employee(int employeeID, String lastName, String firstName, String title, String titleOfCourtesy,
-            String birthDate, String hireDate, String address, String city, String region, String postalCode,
+            LocalDate birthDate, LocalDate hireDate, String address, String city, String region, String postalCode,
             String country, String homePhone, String extension, String photo, String notes, int reportsTo,
             String photoPath) {
         this.employeeID = employeeID;
@@ -87,19 +87,19 @@ public class Employee  {
         this.titleOfCourtesy = titleOfCourtesy;
     }
 
-    public String getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
-    public String getHireDate() {
+    public LocalDate getHireDate() {
         return hireDate;
     }
 
-    public void setHireDate(String hireDate) {
+    public void setHireDate(LocalDate hireDate) {
         this.hireDate = hireDate;
     }
 

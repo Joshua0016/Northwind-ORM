@@ -1,6 +1,6 @@
 package models;
 
-public class Customers  {
+public class Customer  {
 
     private int customerID;
     private String companyName;
@@ -15,7 +15,7 @@ public class Customers  {
     private String phone;
     private String fax;
 
-    public Customers(int customerID, String companyName, String contactName, String contactTitle,
+    public Customer(int customerID, String companyName, String contactName, String contactTitle,
             String address, String city, String region, String postalCode,
             String country, String phone, String fax) {
         this.customerID = customerID;

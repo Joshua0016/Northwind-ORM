@@ -1,13 +1,13 @@
 package models;
 
-public class Categories  {
+public class Categorie  {
 
     private int categoryID;
     private String categoryName;
     private String description;
     private String picture;
 
-    public Categories(int categoryID, String categoryName, String description, String picture) {
+    public Categorie(int categoryID, String categoryName, String description, String picture) {
         this.categoryID = categoryID;
         this.categoryName = categoryName;
         this.description = description;
