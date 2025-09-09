@@ -1,6 +1,6 @@
 package models;
 
-public class Categorie  {
+public class Categorie {
 
     private int categoryID;
     private String categoryName;
@@ -45,7 +45,5 @@ public class Categorie  {
     public void setPicture(String picture) {
         this.picture = picture;
     }
-
-    
 
 }
